@@ -30,13 +30,30 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
       })
       
 ------ Tab
-     local Tab1o = MakeTab({Name = "Prison life"})
+     local Tab1o = MakeTab({Name = "Tab: Prison life"})
+     local Tab2o = MakeTab({Name = "Tab: infiniteyield"})
+     local Tab3o = MakeTab({Name = "Tab: Forsaken"})
+     
      
 ------- BUTTON
     
     AddButton(Tab1o, {
-     Name = "Prison life",
+     Name = "Prison life (NoKey)",
     Callback = function()
 	   loadstring(game:HttpGet("https://raw.githubusercontent.com/Luxxorh/Roblox-Scripts/refs/heads/main/Prison%20Life",true))()
+  end
+  })
+  
+  AddButton(Tab2o, {
+     Name = "infiniteyield",
+    Callback = function()
+	   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+  end
+  })
+  
+  AddButton(Tab3o, {
+     Name = "Forsaken (NoKey)",
+    Callback = function()
+	   loadstring(game:HttpGet("https://rawscripts.net/raw/G666-Forsaken-Guesting-Hub-AutoBlock-Esp-aimbot-and-more-63558"))()
   end
   })
