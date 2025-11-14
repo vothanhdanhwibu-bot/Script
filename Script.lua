@@ -33,7 +33,9 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
      local Tab1o = MakeTab({Name = "Tab: Prison life"})
      local Tab2o = MakeTab({Name = "Tab: infiniteyield"})
      local Tab3o = MakeTab({Name = "Tab: Forsaken"})
-     
+     local Tab4o = MakeTab({Name = "Tab: Free gamepass"})
+
+
      
 ------- BUTTON
     
@@ -55,5 +57,12 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
      Name = "Forsaken (NoKey)",
     Callback = function()
 	   loadstring(game:HttpGet("https://rawscripts.net/raw/G666-Forsaken-Guesting-Hub-AutoBlock-Esp-aimbot-and-more-63558"))()
+  end
+  })
+
+AddButton(Tab4o, {
+     Name = "Free gamepass (NoKey)",
+    Callback = function()
+	   loadstring(game:HttpGet("https://raw.githubusercontent.com/Sqweex-lua/Free-Product-Obfs/main/obfuscated.lua"))()
   end
   })
