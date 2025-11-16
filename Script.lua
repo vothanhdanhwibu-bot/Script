@@ -35,6 +35,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
      local Tab3o = MakeTab({Name = "Tab: Forsaken"})
      local Tab4o = MakeTab({Name = "Tab: Free gamepass"})
      local Tab5o = MakeTab({Name = "Tab: Those who remain"})
+     local Tab6o = MakeTab({Name = "Tab: Fling Things and People"})
 
 
      
@@ -525,5 +526,12 @@ AddButton(Tab4o, {
      Name = "Free gamepass (NoKey)",
     Callback = function()
 	   loadstring(game:HttpGet("https://raw.githubusercontent.com/Sqweex-lua/Free-Product-Obfs/main/obfuscated.lua"))()
+  end
+  })
+
+AddButton(Tab6o, {
+     Name = "Fling Things and People (NoKey)",
+    Callback = function()
+	   loadstring(game:HttpGet("https://rawscripts.net/raw/Fling-Things-and-People-Free-Cosmic-Hub-Open-Sourced-64211"))()
   end
   })
