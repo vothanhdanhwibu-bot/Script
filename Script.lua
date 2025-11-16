@@ -98,7 +98,7 @@ local Combat = {
     },
     SilentAim = {
         Enabled = false, 
-        Radius = 25
+        Radius = 50
     },
     HitBox = {
         Enabled = false, 
