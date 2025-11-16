@@ -24,7 +24,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 repeat wait() until game:IsLoaded()
 local Window = Fluent:CreateWindow({
     Title = "Danh Roblox Tổng Hợp",
-    SubTitle = "Blox Fruit",
+    SubTitle = "DanhDZ",
     TabWidth = 157,
     Size = UDim2.fromOffset(450, 300),
     Acrylic = true,
@@ -37,7 +37,7 @@ local Tabs = {
         Main2=Window:AddTab({ Title="Forsaken" }),
         Main3=Window:AddTab({ Title="Free gamepass" }),
         Main4=Window:AddTab({ Title="Auto jump" }),
-       Main5=Window:AddTab({ Title="Evade" }),
+        Main5=Window:AddTab({ Title="Evade" }),
 }
     Tabs.Main0:AddButton({
     Title = "Discord",
