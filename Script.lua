@@ -2,8 +2,8 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
 
        local Window = MakeWindow({
          Hub = {
-         Title = "DanhROBLOX",
-         Animation = "TỔNG HỢP"
+         Title = "TDanh Roblox",
+         Animation = "SCRIPT: TỔNG HỢP"
          },
         Key = {
         KeySystem = false,
@@ -35,8 +35,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
      local Tab3o = MakeTab({Name = "Tab: Forsaken"})
      local Tab4o = MakeTab({Name = "Tab: Free gamepass"})
      local Tab5o = MakeTab({Name = "Tab: Those who remain"})
-     local Tab6o = MakeTab({Name = "Tab: Fling T and P"})
-
+     local Tab6o = MakeTab({Name = "Tab:  "})
 
      
 ------- BUTTON
@@ -520,7 +519,6 @@ end)
 OrionLib:Init()
   end
   })
-
 
 AddButton(Tab4o, {
      Name = "Free gamepass (NoKey)",
