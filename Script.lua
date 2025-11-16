@@ -61,7 +61,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
   end
   })
 
-AddButton(Tab3o, {
+AddButton(Tab5o, {
      Name = "Those who remain (NoKey)",
     Callback = function()
 	   local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jensonhirst/Orion/main/source')))()
