@@ -2,18 +2,21 @@ local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local player = Players.LocalPlayer
 
+-- 🌌 INTRO GUI
 local gui = Instance.new("ScreenGui")
 gui.Name = "GraiIntro"
 gui.IgnoreGuiInset = true
 gui.ResetOnSpawn = false
 gui.Parent = player:WaitForChild("PlayerGui")
 
+-- Nền tối nhẹ
 local bg = Instance.new("Frame")
 bg.Size = UDim2.new(1,0,1,0)
 bg.BackgroundColor3 = Color3.fromRGB(0,0,0)
 bg.BackgroundTransparency = 0.3
 bg.Parent = gui
 
+-- Logo Image
 local logo = Instance.new("ImageLabel")
 logo.Parent = gui
 logo.AnchorPoint = Vector2.new(0.5,0.5)
@@ -23,11 +26,13 @@ logo.BackgroundTransparency = 1
 logo.Image = "http://www.roblox.com/asset/?id=114559709340851"
 logo.ImageTransparency = 1
 
+-- Hiện logo (zoom + fade in)
 TweenService:Create(logo, TweenInfo.new(1.5, Enum.EasingStyle.Elastic, Enum.EasingDirection.Out), {
     Size = UDim2.new(0,200,0,200),
     ImageTransparency = 0
 }):Play()
 
+-- Xoay logo
 task.spawn(function()
     while logo.Parent do
         logo.Rotation = logo.Rotation + 0.5
@@ -35,6 +40,7 @@ task.spawn(function()
     end
 end)
 
+-- Chữ bên dưới logo
 local msg = Instance.new("TextLabel")
 msg.Parent = gui
 msg.AnchorPoint = Vector2.new(0.5,0)
@@ -49,10 +55,13 @@ msg.TextStrokeTransparency = 0
 msg.TextStrokeColor3 = Color3.fromRGB(0,0,0)
 msg.TextTransparency = 1
 
+-- Chữ fade in
 TweenService:Create(msg, TweenInfo.new(1.2), {TextTransparency=0}):Play()
 
+-- Giữ intro 4s
 task.wait(4)
 
+-- Fade out tất cả
 TweenService:Create(logo, TweenInfo.new(1.2), {ImageTransparency=1}):Play()
 TweenService:Create(msg, TweenInfo.new(1.2), {TextTransparency=1}):Play()
 TweenService:Create(bg, TweenInfo.new(1.2), {BackgroundTransparency=1}):Play()
@@ -60,6 +69,8 @@ task.wait(1.5)
 
 gui:Destroy()
 
+------------------------------------------------------------
+-- 🎛 MAIN UI BUTTON
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -81,6 +92,8 @@ ImageButton.MouseButton1Down:Connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.End,false,game)
 end)
 
+------------------------------------------------------------
+-- 📦 LOAD FLUENT
 repeat task.wait() until game:IsLoaded()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
@@ -94,16 +107,18 @@ local Window = Fluent:CreateWindow({
     MinimizeKey=Enum.KeyCode.End
 })
 
+-- Tabs
 local Tabs = {
     Main0=Window:AddTab({Title="Thông Tin"}),
     Main1=Window:AddTab({Title="Those who remain"}),
     Main2=Window:AddTab({Title="Forsaken"}),
-    Main3=Window:AddTab({Title="Free gamepass"})
-    Main4=Window:AddTab({Title="Auto jump"})
-    Main5=Window:AddTab({Title="Evade"})
-    Main6=Window:AddTab({Title="Infinite-yield"})
+    Main3=Window:AddTab({Title="Free gamepass"}),
+    Main4=Window:AddTab({Title="Auto jump"}),
+    Main5=Window:AddTab({Title="Evade"}),
+    Main6=Window:AddTab({Title="Infinite-yield"}),
 }
 
+-- Tab 0: Thông Tin
 Tabs.Main0:AddButton({
     Title="Youtuber",
     Description="Cat",
@@ -584,21 +599,18 @@ Tabs.Main3:AddButton({
 })
 Tabs.Main4:AddButton({
     Title="Auto jump-Không chạm đất (NoKey)",
-    Description="",
     Callback=function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/catwljzy/catwljz/refs/heads/main/aotojump.txt"))()
     end
 })
 Tabs.Main4:AddButton({
     Title="Auto jump-Chạm đất (NoKey)",
-    Description="",
     Callback=function()
         loadstring(game:HttpGet('https://pastefy.app/D7XFp8bZ/raw'))()
     end
 })
 Tabs.Main5:AddButton({
     Title="Evade (Key: whakizashi-key)",
-    Description="",
     Callback=function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/scv8contact-cpu/Whakizashi-hub-x/refs/heads/main/WhakizashiHubX-Evade"))()
     end
