@@ -117,6 +117,9 @@ local Tabs = {
     Main5=Window:AddTab({Title="Evade"})
     Main6=Window:AddTab({Title="Infinite yield"})
     Main7=Window:AddTab({Title="Speed Hub"})
+    Main8=Window:AddTab({Title="Granny Multiplayer"})
+    Main9=Window:AddTab({Title="volleyball Legend"})
+    Main10=Window:AddTab({Title="TSB"})
 }
 
 -- Tab 0: Thông Tin
@@ -175,5 +178,23 @@ Tabs.Main7:AddButton({
     Title="Speed Hub",
     Callback=function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+    end
+})
+Tabs.Main8:AddButton({
+    Title="Granny Multiplayer",
+    Callback=function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/yYQMZUb6"))()
+    end
+})
+Tabs.Main9:AddButton({
+    Title="volleyball Legend",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Zayn31214/name/refs/heads/main/SterlingNew"))()
+    end
+})
+Tabs.Main10:AddButton({
+    Title="TSB",
+    Callback=function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DiosDi/VexonHub/refs/heads/main/VexonHub"))()
     end
 })
