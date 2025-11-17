@@ -98,7 +98,7 @@ repeat task.wait() until game:IsLoaded()
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title="Grai2",
+    Title="Danh-RobloxVNG",
     SubTitle="Tổng Hợp Script",
     TabWidth=157,
     Size=UDim2.fromOffset(450,300),
@@ -110,7 +110,7 @@ local Window = Fluent:CreateWindow({
 -- Tabs
 local Tabs = {
     Main0=Window:AddTab({Title="Thông Tin"}),
-    Main1=Window:AddTab({Title="Blox Fruits"}),
+    Main1=Window:AddTab({Title="Those who remain"}),
     Main2=Window:AddTab({Title="Grow A Garden"}),
     Main3=Window:AddTab({Title="99 Nights In The Forest"})
 }
@@ -118,18 +118,17 @@ local Tabs = {
 -- Tab 0: Thông Tin
 Tabs.Main0:AddButton({
     Title="Youtuber",
-    Description="Grai2",
+    Description="Cat",
     Callback=function()
-        setclipboard("https://youtube.com/@grai2")
+        setclipboard("https://www.youtube.com/@Danh-RobloxVNG")
     end
 })
 
 -- Tab 1: Blox Fruits
 Tabs.Main1:AddButton({
-    Title="Redz Hub",
+    Title="Those who remain",
     Callback=function()
-        local Settings={JoinTeam="Pirates",Translator=true}
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/newredz/BloxFruits/refs/heads/main/Source.luau"))(Settings)
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/vothanhdanhwibu-bot/Script/refs/heads/main/Script-THOSE-WHO-REMAIN"))()
     end
 })
 Tabs.Main1:AddButton({
